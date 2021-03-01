@@ -19,16 +19,16 @@ let board = []; // array of rows, each row is array of cells  (board[y][x])
 
 function makeBoard() {
   // TODO: set "board" to empty HEIGHT x WIDTH matrix array
-  // start with HEIGHT (y)
+  // start with HEIGHT (y) 
   for(let y = 0; y < HEIGHT; y++) {
-    // push board 
+    // push board to screen 
     board.push([]); 
   }
   // HEIGHT (y) 
   for(let y = 0; y < HEIGHT; y++) {
     // WIDTH (x) 
     for(let x = 0; x < WIDTH; x++) {
-      // push board 
+      // push board to screen with 6/7 
       board[y].push(null); 
     }
   }
