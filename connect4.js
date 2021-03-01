@@ -28,11 +28,17 @@ function makeBoard() {
   for(let y = 0; y < HEIGHT; y++) {
     // WIDTH (x) 
     for(let x = 0; x < WIDTH; x++) {
-      // push board to screen with 6/7 
+      // push nulls to screen with 6/7 
       board[y].push(null); 
     }
-  }
+  } 
 }
+
+// // Another way for makeBoard() 
+// function makeBoard() {
+//   // create new Array with 6 rows; 7 columns; fill with nulls (or undefined, 0 or other falsy value) 
+//   const gameBoard = new Array(6).fill(new Array(7).fill(null)); 
+// }
 
 /** makeHtmlBoard: make HTML table and row of column tops. */
 
