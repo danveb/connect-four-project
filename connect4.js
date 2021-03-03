@@ -47,27 +47,40 @@ function makeHtmlBoard() {
   const htmlBoard = document.getElementById('board'); 
 
   // TODO: add comment for this code
-  // make top column; click to add a piece
+  // create a table row 
   const top = document.createElement("tr");
+  // set ID as column-top 
   top.setAttribute("id", "column-top");
+  // "click" event for table row 
   top.addEventListener("click", handleClick);
 
+  // set row length to be same as width 
   for (let x = 0; x < WIDTH; x++) {
+    // create table data cell 
     const headCell = document.createElement("td");
+    // set ID as x
     headCell.setAttribute("id", x);
+    // append td to table row 
     top.append(headCell);
   }
+  // append row to htmlBoard
   htmlBoard.append(top);
 
   // TODO: add comment for this code
-  // make the board 
+  // set column length to be same as height  
   for (let y = 0; y < HEIGHT; y++) {
+    // create a table row 
     const row = document.createElement("tr");
+    // make the cells for width 
     for (let x = 0; x < WIDTH; x++) {
+      // create individual cells for table 
       const cell = document.createElement("td");
+      // set attribute ID 
       cell.setAttribute("id", `${y}-${x}`);
+      // append cells to row
       row.append(cell);
     }
+    // append row to htmlBoard
     htmlBoard.append(row);
   }
 }
@@ -81,14 +94,14 @@ function findSpotForCol(x) {
       return y;
     }
   }
-  return null;
+  return null; 
 }
 
 /** placeInTable: update DOM to place piece into HTML table of board */
 
 function placeInTable(y, x) {
   // TODO: make a div and insert into correct table cell
-  // initialize piece; create 'div' 
+  // create a 'div' 
   let piece = document.createElement('div'); 
   // add class 'piece' 
   piece.classList.add('piece'); 
